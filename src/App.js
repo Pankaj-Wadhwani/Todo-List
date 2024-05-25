@@ -65,7 +65,7 @@ function App() {
       <Router>
       <Header title="My Todos List" searchBar={false} /> 
       <Routes>
-          <Route path="/" render={()=>{
+          <Route path="/" Component={()=>{
             return(
             <>
             <AddTodo addTodo={addTodo} />
@@ -73,13 +73,13 @@ function App() {
             </>)
           }}> 
           </Route>
-          {/* <Route exact path="/about" render={()=>{
+          <Route exact path="/about" Component={()=>{
             return(
             <>
           <About />
             </>)
           }}>             
-          </Route>  */}
+          </Route> 
         </Routes> 
       <Footer />
     </Router>
